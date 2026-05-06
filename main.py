@@ -46,14 +46,23 @@ if FRONTEND_DIR.exists():
     app.mount("/static", StaticFiles(directory=str(FRONTEND_DIR)), name="static")
 
 # ── Lazy singleton ────────────────────────────────────────────
+# _rag: MedicalRAG | None = None
+
+# def get_rag() -> MedicalRAG:
+#     global _rag
+#     if _rag is None:
+#         _rag = MedicalRAG()
+#     return _rag
+
 _rag: MedicalRAG | None = None
 
-def get_rag() -> MedicalRAG:
+@app.on_event("startup")
+async def startup_event():
     global _rag
-    if _rag is None:
-        _rag = MedicalRAG()
-    return _rag
+    _rag = MedicalRAG()
 
+def get_rag() -> MedicalRAG:
+    return _rag
 
 # ── Request / Response models ─────────────────────────────────
 class ChatRequest(BaseModel):
