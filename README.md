@@ -15,7 +15,7 @@ A **complete end-to-end medical chatbot** built with:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 medical-chatbot/
@@ -39,7 +39,7 @@ medical-chatbot/
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### 1. Add your API keys to `.env`
 
@@ -65,7 +65,7 @@ Navigate to **http://localhost:8000**
 
 ---
 
-## 🛠️ Manual Setup (Alternative)
+## Manual Setup (Alternative)
 
 ```bash
 # Create & activate virtual environment
@@ -127,7 +127,7 @@ User Question
 
 ---
 
-## 📄 Adding Medical Documents
+## Adding Medical Documents
 
 **Via the UI**: Click the upload zone in the sidebar → select a PDF or TXT file.
 
@@ -141,7 +141,7 @@ curl -X POST http://localhost:8000/api/upload \
 
 ---
 
-## 🔌 API Reference
+## API Reference
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -175,7 +175,7 @@ POST /api/chat
 
 ---
 
-## 🌡️ Built-in Medical Knowledge Base
+## Built-in Medical Knowledge Base
 
 The chatbot ships with seed knowledge on:
 
@@ -192,12 +192,12 @@ The chatbot ships with seed knowledge on:
 
 ---
 
-## ⚠️ Medical Disclaimer
+## Medical Disclaimer
 
 This chatbot provides **medical information only**, not medical advice. It does not diagnose conditions, prescribe treatments, or replace professional medical consultation. Always consult a qualified healthcare provider for personal health decisions.
 
 ---
 
-## 📜 License
+## License
 
 MIT – use freely, modify, and build upon.
